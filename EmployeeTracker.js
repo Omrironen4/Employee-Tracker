@@ -75,6 +75,35 @@ const runSearch = () => {
 }
 
 const viewAllEmp = () => {
-    
+    const query = 'SELECT first_name, last_name, role_id, manager_id FROM employee WHERE ? ? ? ?';
+    connection.query(query, )
+    console.table([
+        {
+          name: ,
+          age: 10
+        }, {
+          name: 'bar',
+          age: 20
+        }
+      ]);
 }
 
+const addEmployee = () => {
+
+    inquirer
+        .prompt({
+            name: ''
+        })
+
+    const query = 'SELECT first_name, last_name, role_id, manager_id FROM employee WHERE ? ? ? ?';
+    connection.query(query, )
+    console.table([
+        {
+          name: ,
+          age: 10
+        }, {
+          name: 'bar',
+          age: 20
+        }
+      ]);
+}
