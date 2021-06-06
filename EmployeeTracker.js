@@ -11,4 +11,13 @@ const connection = mysql.createConnection({
     user: 'root', 
 
     password: process.env.myPassword,
+
+    database: 'employee_tracker'
 });
+
+connection.connect((err) => {
+    if (err) throw err;
+    runSearch();
+});
+
+
