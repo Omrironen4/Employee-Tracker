@@ -30,16 +30,20 @@ VALUE ('Bike Painter', 60000, 4);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUE ('Aidan', 'Hoffman', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Jeff', 'Ross', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Paulina', 'Paredes', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Juliana', 'Royce', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Louis', 'Reeves', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Amanda', 'Goodman', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Corey', 'Griffith', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Aidan', 'Hoffman', 1, 101);
+VALUE ('Tomer', 'Ronen', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Mark', 'Pierre', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Jack', 'Sparrow', 1, 101);
