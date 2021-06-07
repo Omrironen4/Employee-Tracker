@@ -25,3 +25,21 @@ INSERT INTO role (title, salary, department_id)
 VALUE ('Bike Designer', 95000, 4);
 INSERT INTO role (title, salary, department_id)
 VALUE ('Bike Painter', 60000, 4);
+
+-- employee seeds --
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ('Aidan', 'Hoffman', 1, 101);
