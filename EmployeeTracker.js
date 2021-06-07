@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
-require('dotenv').config;
+require('dotenv').config();
 const cTable = require('console.table');
 
 const connection = mysql.createConnection({
@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 
     user: 'root',
 
-    password: 'Woodstock69!',
+    password: process.env.myPassword,
 
     database: 'employee_tracker'
 });
@@ -74,41 +74,7 @@ const runSearch = () => {
         });
 }
 
-const viewAllEmp = () => {
-    const query = 'SELECT first_name, last_name, role_id, manager_id FROM employee WHERE ? ? ? ?';
-    connection.query(query,)
-    // console.table([
-    //     {
-    //       name: ,
-    //       age: 10
-    //     }, {
-    //       name: 'bar',
-    //       age: 20
-    //     }
-    //   ]);
-}
+const viewAllEmp = () => {}
 
-const addEmployee = () => {
+const addEmployee = () => {}
 
-    inquirer
-        .prompt({
-            name: 'name',
-            type: 'input',
-            message: 'What is the employees first name?'
-        })
-        .then((answer) => {
-            const query = 'INSERT INTO employee SET ?';
-            connection.query(query, { first_name: answer.name }, (err, res) => {
-                if (err) throw err;
-                console.table([
-                    {
-                        name: answer.name,
-                        age: 10
-                    }
-                ]);
-
-            })
-        })
-
-
-}
