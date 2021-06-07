@@ -77,7 +77,6 @@ const runSearch = () => {
 const viewAllEmp = () => {
     const query = 'SELECT * FROM employee';
     connection.query(query, (err, res) => {
-        console.log(res);
         console.table(res);
     } )
 }
