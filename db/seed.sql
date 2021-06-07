@@ -32,18 +32,18 @@ VALUE ('Aidan', 'Hoffman', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUE ('Jeff', 'Ross', 1, 101);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Paulina', 'Paredes', 1, 101);
+VALUE ('Paulina', 'Paredes', 3, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Juliana', 'Royce', 1, 101);
+VALUE ('Juliana', 'Royce', 4, 106);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Louis', 'Reeves', 1, 101);
+VALUE ('Louis', 'Reeves', 2, 105);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Amanda', 'Goodman', 1, 101);
+VALUE ('Amanda', 'Goodman', 4, 106);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Corey', 'Griffith', 1, 101);
+VALUE ('Corey', 'Griffith', 3, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Tomer', 'Ronen', 1, 101);
+VALUE ('Tomer', 'Ronen', 2, 105);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Mark', 'Pierre', 1, 101);
+VALUE ('Mark', 'Pierre', 4, 106);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Jack', 'Sparrow', 1, 101);
+VALUE ('Jack', 'Sparrow', 4, 106);
