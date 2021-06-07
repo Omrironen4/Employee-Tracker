@@ -28,7 +28,7 @@ const runSearch = () => {
             type: 'list',
             message: 'What would you like to do?',
             choices: [
-                'View All Epmployees',
+                'View All Employees',
                 'View All Employees By Department',
                 'View All Employees By Manager',
                 'Add Employee',
@@ -39,7 +39,7 @@ const runSearch = () => {
         })
         .then((answer) => {
             switch (answer.action) {
-                case 'View All Epmployees':
+                case 'View All Employees':
                     viewAllEmp();
                     break;
 
@@ -74,7 +74,29 @@ const runSearch = () => {
         });
 }
 
-const viewAllEmp = () => {}
+const viewAllEmp = () => {
+    const query = 'SELECT * FROM employee';
+    connection.query(query, (err, res) => {
+        console.table(res);
+    } )
+}
 
 const addEmployee = () => {}
 
+const viewAllByDep = () => {
+    const query = 'SELECT * FROM department';
+    connection.query(query, (err, res) => {
+        console.table(res);
+    } )
+}
+
+// CREATE TABLE employee (
+// 	id INT AUTO_INCREMENT NOT NULL,
+//     first_name VARCHAR(30) NOT NULL,
+//     last_name VARCHAR(30) NOT NULL,
+//     role_id INT NOT NULL,
+//     manager_id INT NULL,
+//     PRIMARY KEY (id),
+//     FOREIGN KEY (role_id) REFERENCES role(id),
+//     FOREIGN KEY (manager_id) REFERENCES employee(id)
+// );
