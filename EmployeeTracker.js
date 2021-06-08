@@ -47,10 +47,6 @@ const runSearch = () => {
                     viewAllByDep();
                     break;
 
-                case 'View All Employees By Manager':
-                    viewAllByMan();
-                    break;
-
                 case 'Add Employee':
                     addEmployee();
                     break;
@@ -83,8 +79,6 @@ const viewAllEmp = () => {
     });
 }
 
-const addEmployee = () => {}
-
 const viewAllByDep = () => {
     const query = 'SELECT role.id, role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id'; 
     connection.query(query, (err, res) => {
@@ -93,6 +87,13 @@ const viewAllByDep = () => {
         runSearch();
     });
 }
+
+const viewAllByMan = () => {
+    const query = 'SELECT '
+}
+
+const addEmployee = () => {}
+
 
 
 
