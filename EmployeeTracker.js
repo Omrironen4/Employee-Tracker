@@ -29,8 +29,7 @@ const runSearch = () => {
             message: 'What would you like to do?',
             choices: [
                 'View All Employees',
-                'View All Employees By Department',
-                'View All Employees By Manager',
+                'View All Departments',
                 'Add Employee',
                 'Remove Employee',
                 'Update Employee Role',
@@ -43,7 +42,7 @@ const runSearch = () => {
                     viewAllEmp();
                     break;
 
-                case 'View All Employees By Department':
+                case 'View All Departments':
                     viewAllByDep();
                     break;
 
@@ -88,11 +87,10 @@ const viewAllByDep = () => {
     });
 }
 
-const viewAllByMan = () => {
-    const query = 'SELECT '
-}
 
-const addEmployee = () => {}
+const addEmployee = () => {
+
+}
 
 
 
