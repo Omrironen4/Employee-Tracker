@@ -77,17 +77,21 @@ const runSearch = () => {
 const viewAllEmp = () => {
     const query = 'SELECT * FROM employee';
     connection.query(query, (err, res) => {
+        if(err) throw (err);
         console.table(res);
-    } )
+        runSearch();
+    });
 }
 
 const addEmployee = () => {}
 
 const viewAllByDep = () => {
-    const query = 'SELECT * FROM department';
+    const query = 'SELECT * FROM department ORDER BY id';
     connection.query(query, (err, res) => {
+        if(err) throw (err);
         console.table(res);
-    } )
+        runSearch();
+    });
 }
 
 // CREATE TABLE employee (
