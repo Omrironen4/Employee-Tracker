@@ -83,7 +83,7 @@ const runSearch = () => {
 
 
 const viewAllByDep = () => {
-    const query = 'SELECT role.id, role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id';
+    const query = 'SELECT department.id, department.name FROM department ORDER BY id';
     connection.query(query, (err, res) => {
         if (err) throw (err);
         console.table(res);
@@ -92,8 +92,13 @@ const viewAllByDep = () => {
 }
 
 const viewAllRoles = () => {
-    const query = 'SELECT '
-}
+  connection.query('SELECT role.id, role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id', (err, res) => {
+    if (err) throw err;
+    console.table(res);
+    runSearch();
+  });
+};
+
 
 const viewAllEmp = () => {
     const query = `SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee AS manager RIGHT JOIN employee ON employee.manager_id = manager.id LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id`;
@@ -107,49 +112,7 @@ const viewAllEmp = () => {
 
 
 
-const addEmployee = async () => {
-    inquirer
-        .prompt([
-            {
-                name: 'firstName',
-                type: 'input',
-                message: `What is the employee's first name?`
-            },
-            {
-                name: 'lastName',
-                type: 'input',
-                message: `What is the employee's last name?`
-            },
-            {
-                name: 'roleId',
-                type: 'list',
-                message: `What is the employee's role?`,
-                choices: await roleChoices()
-            },
-            {
-                name: 'managerId',
-                type: 'list',
-                message: `Who is the employee's manager?`,
-                choices: await employeeChoices()
-            }
-        ])
-        .then((answer) => {
-            connection.query(
-                'INSERT INTO employee SET ?',
-                {
-                    first_name: answer.firstName,
-                    last_name: answer.lastName,
-                    role_id: answer.roleId,
-                    manager_id: answer.managerId
-                },
-                (err) => {
-                    if (err) throw err;
-                    console.log(`Added ${answer.firstName} ${answer.lastName} to the database`);
-                    start();
-                }
-            )
-        });
-};
+const addEmployee = async () => {};
 
 
 
