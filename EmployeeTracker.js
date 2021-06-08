@@ -75,7 +75,7 @@ const runSearch = () => {
 }
 
 const viewAllEmp = () => {
-    const query = 'SELECT * FROM employee';
+    const query = `SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee AS manager RIGHT JOIN employee ON employee.manager_id = manager.id LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id`;
     connection.query(query, (err, res) => {
         if(err) throw (err);
         console.table(res);
@@ -86,7 +86,7 @@ const viewAllEmp = () => {
 const addEmployee = () => {}
 
 const viewAllByDep = () => {
-    const query = 'SELECT * FROM department ORDER BY id';
+    const query = 'SELECT role.id, role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id'; 
     connection.query(query, (err, res) => {
         if(err) throw (err);
         console.table(res);
@@ -94,13 +94,5 @@ const viewAllByDep = () => {
     });
 }
 
-// CREATE TABLE employee (
-// 	id INT AUTO_INCREMENT NOT NULL,
-//     first_name VARCHAR(30) NOT NULL,
-//     last_name VARCHAR(30) NOT NULL,
-//     role_id INT NOT NULL,
-//     manager_id INT NULL,
-//     PRIMARY KEY (id),
-//     FOREIGN KEY (role_id) REFERENCES role(id),
-//     FOREIGN KEY (manager_id) REFERENCES employee(id)
-// );
+
+

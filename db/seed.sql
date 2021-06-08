@@ -29,20 +29,16 @@ VALUE ('Bike Painter', 60000, 4);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUE ('Aidan', 'Hoffman', 1, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Jeff', 'Ross', 1, 1);
+VALUE ('Jeff', 'Ross', 2, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUE ('Paulina', 'Paredes', 3, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUE ('Juliana', 'Royce', 4, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Louis', 'Reeves', 2, 1);
+VALUE ('Louis', 'Reeves', 5, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Amanda', 'Goodman', 4, 1);
+VALUE ('Amanda', 'Goodman', 6, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Corey', 'Griffith', 3, 1);
+VALUE ('Corey', 'Griffith', 7, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Tomer', 'Ronen', 2, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Mark', 'Pierre', 4, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUE ('Jack', 'Sparrow', 4, 1);
+VALUE ('Tomer', 'Ronen', 8, 1);
