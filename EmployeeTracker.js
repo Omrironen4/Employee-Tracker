@@ -107,12 +107,24 @@ const viewAllEmp = () => {
         console.table(res);
         runSearch();
     });
-}
+};
 
 
+const addDep = () => {
 
+};
 
-const addEmployee = async () => {};
+const addRole = () => {
+
+};
+
+const addEmployee = async () => {
+
+};
+
+const updateRole = () => {
+
+};
 
 
 
